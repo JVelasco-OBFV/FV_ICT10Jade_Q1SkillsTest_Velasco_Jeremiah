@@ -6,8 +6,10 @@ def show_order(e):
     size = document.querySelector("input[name='size']:checked")
     price = float(size.value)
     pizza = document.getElementById("prod1")
+    drinks = document.getElementById("prod2")
     pizza_price = float(pizza.value)
-    subtotal = price + pizza_price
+    drink_price = float(drinks.value)
+    subtotal = (price + pizza_price + drink_price)
     tax = 0.12 * subtotal
     total = float(tax) + float(subtotal)
     display('===RECEIPT===', target="output1")
