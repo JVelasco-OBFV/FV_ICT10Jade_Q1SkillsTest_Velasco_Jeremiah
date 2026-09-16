@@ -14,6 +14,6 @@ def show_order(e):
     grandtotal = float(tax) + float(subtotal) #calculates the final price of overall items including tax
     display('===RECEIPT===', target="output1")
     display(f'Subtotal: {subtotal}', target="output2")
-    display(f'Tax: {tax}', target="output2", append=True)
-    display(f'Total: {grandtotal}', target="output2", append=True)
+    display(f'Tax: {tax // 1}', target="output2", append=True)
+    display(f'Total: {grandtotal // 1}', target="output2", append=True)
     display(f'Thank you for supporting us! :D', target="output2", append=True)
