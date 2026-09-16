@@ -11,9 +11,9 @@ def show_order(e):
     drink_price = float(drinks.value)
     subtotal = (price + pizza_price + drink_price) #adds the prices from the input and select fields to generate an initial price (without tax)
     tax = 0.12 * subtotal #calculates the tax prices from overall items
-    total = float(tax) + float(subtotal) #calculates the final price of overall items including tax
+    grandtotal = float(tax) + float(subtotal) #calculates the final price of overall items including tax
     display('===RECEIPT===', target="output1")
     display(f'Subtotal: {subtotal}', target="output2")
     display(f'Tax: {tax}', target="output2", append=True)
-    display(f'Total: {total}', target="output2", append=True)
+    display(f'Total: {grandtotal}', target="output2", append=True)
     display(f'Thank you for supporting us! :D', target="output2", append=True)
